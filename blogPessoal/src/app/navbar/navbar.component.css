@@ -1,0 +1,8 @@
+.texto {
+    letter-spacing: 2.rem;
+    font-size: 16pt;
+}
+
+a {
+    cursor: pointer;
+}
