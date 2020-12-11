@@ -8,7 +8,7 @@
         
         <!--Titulo-->
         <div class="col-md-8">
-            <h4 class="text-center mb-4 text-monospace">Minhas experiências de Vida...</h4>
+            <h4 class="text-center mb-4 text-monospace">Diário de um(a) Preto(a)...</h4>
         <!--/Titulo-->    
         
         <!--Formulário-->    
@@ -24,9 +24,11 @@
 
             <div class="row d-flex align-items-end">
                 <div class="col-md-6">
+                    
                     <div class="form-group m-0">
                         <label class="text-monospace" for="tema">Escolha um tema ou 
-                            <a routerLink="/cadastro-tema">Cadaste um novo</a></label>
+                            <a class = "text-dark bg-light "routerLink="/cadastro-tema">Cadastre um novo.</a>
+                        </label>
 
                             <select name="tema" id='tema' class="form-control" [(ngModel)]='idTema' (change)='findByIdTemas()'>
                                 <option *ngFor='let item of listaTema' value={{item.id}}>
@@ -35,9 +37,10 @@
                             </select>
 
                     </div>
+                    
                 </div>
                 <div class="col-md-6 d-flex justify-content-end">
-                    <button type="button" class="btn btn-outline-success w-25" (click) = 'publicar()' >Publicar</button>
+                    <button type="button" class="btn btn-outline-dark w-25" (click)='publicar()' >Publicar</button>
                 </div>
             </div>
         <!--/Formulário-->      
@@ -64,7 +67,7 @@
                                 aria-label="Pesquisar">
                         </div>
                         <div class="col-md-2 pl-0">
-                            <button class="btn btn-outline-warning w-100" type="button">Pesquisar</button>
+                            <button class="btn btn-outline-dark w-100" type="button">Pesquisar</button>
                         </div>
                     </div>
 
@@ -80,11 +83,13 @@
                                     </div>
                                     <div class="col-md-4 d-flex justify-content-end">
             
-                                        <button class="mr-3 btn btn-outline-info" >
+                                        <button class="mr-3 btn btn-outline-dark"
+                                        [routerLink]="['/editar-post', item.id]">
                                             Editar
                                         </button>
             
-                                        <button class="btn btn-outline-danger ml-3" >
+                                        <button class="btn btn-outline-danger ml-3"
+                                        [routerLink]="['/delete-post', item.id]" >
                                             Apagar
                                         </button>
             
@@ -111,7 +116,7 @@
                                 aria-label="Pesquisar">
                         </div>
                         <div class="col-md-2 pl-0">
-                            <button class="btn btn-outline-warning w-100" type="button">Pesquisar</button>
+                            <button class="btn btn-outline-dark w-100" type="button">Pesquisar</button>
                         </div>
                     </div>
                 </div>
