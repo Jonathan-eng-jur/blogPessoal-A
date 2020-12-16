@@ -10,25 +10,22 @@ import { PostTemaComponent } from './post-tema/post-tema.component';
 import { PutPostagemComponent } from './put-postagem/put-postagem.component';
 import { PutTemaComponent } from './put-tema/put-tema.component';
 
-
 const routes: Routes = [
-
-{path: "", redirectTo: "home,", pathMatch: "full"},
-{path: "home", component: HomeComponent},
-{path: "feed", component: FeedComponent},
-{path: "login", component:LoginComponent},
-{path: "cadastro", component: CadastroComponent},
-{path: "cadastro-tema", component: PostTemaComponent},
-{path: "delete-post/:id", component: DeletePostagemComponent},
-{path: "editar-post/:id", component: PutPostagemComponent},
-{path: "delete-tema/:id", component: DeleteTemaComponent},
-{path: "put-tema/:id", component: PutTemaComponent}
-
-
+  {path: "", component: HomeComponent},
+  {path: "home", component: HomeComponent},
+  {path: "feed", component: FeedComponent},
+  {path: "login", component:LoginComponent},
+  {path: "cadastro", component: CadastroComponent},
+  {path: "cadastro-tema", component: PostTemaComponent},
+  {path: "delete-post/:id", component: DeletePostagemComponent},
+  {path: "editar-post/:id", component: PutPostagemComponent},
+  {path: "delete-tema/:id", component: DeleteTemaComponent},
+  {path: "put-tema/:id", component: PutTemaComponent}
 ];
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
   exports: [RouterModule]
 })
+
 export class AppRoutingModule { }

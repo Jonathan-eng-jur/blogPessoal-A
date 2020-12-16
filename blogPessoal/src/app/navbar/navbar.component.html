@@ -1,40 +1,33 @@
-<div class="container-fluid justify-content-center">
+<div class="">
+  <nav class="navbar navbar-dark bg-dark navbar-expand-lg menu-superior">    
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#conteudoNavbarSuportado" aria-controls="conteudoNavbarSuportado" aria-expanded="false" aria-label="Alterna navegação">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+  
+    <div class="collapse navbar-collapse" id="conteudoNavbarSuportado">
+      <ul class="navbar-nav d-flex justify-content-around">
 
-    <nav class="navbar navbar-dark bg-dark navbar-expand-lg"> 
-       
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#conteudoNavbarSuportado" aria-controls="conteudoNavbarSuportado" aria-expanded="false" aria-label="Alterna navegação">
-          <span class="navbar-toggler-icon"></span>
-        </button>
+        <li class="nav-item">
+          <a class="nav-link texto text-monospace text-uppercase font-weight-bold p-3" routerLink="/home">Home <span class="sr-only">(página atual)</span></a>
+        </li>
+
+        <li class="nav-item">
+          <a class="nav-link texto text-monospace text-uppercase font-weight-bold p-3" routerLink="/feed">Feed</a>
+        </li>
+        
+        <li *ngIf='auth.btnLogin()' class="nav-item">
+          <a class="nav-link texto text-monospace text-uppercase font-weight-bold p-3" routerLink="/login">Login</a>
+        </li>
+                  
+        <li class="nav-item">
+          <a class="nav-link texto text-monospace text-uppercase font-weight-bold p-3" routerLink="/cadastro">Cadastro</a>
+        </li>
       
-        <div class="collapse navbar-collapse" id="conteudoNavbarSuportado">
-          <ul class="navbar-nav mr-auto">
-            <li class="nav-item">
-              <a class="nav-link texto text-monospace text-uppercase font-weight-bold p-3" routerLink="/home">Home <span class="sr-only">(página atual)</span></a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link texto text-monospace text-uppercase font-weight-bold p-3" routerLink="/feed">Feed</a>
-            </li>
-            
-            <div *ngIf='auth.btnLogin()'>
-              <li class="nav-item">
-                <a class="nav-link texto text-monospace text-uppercase font-weight-bold p-3" routerLink="/login">Login</a>
-              </li>
-            </div>
+        <li *ngIf='auth.btnSair()' class="nav-item">
+          <a class="nav-link texto text-monospace text-uppercase font-weight-bold p-3" (click)='sair()'>Sair</a>
+        </li>
 
-     
-            <li class="nav-item">
-              <a class="nav-link texto text-monospace text-uppercase font-weight-bold p-3" routerLink="/cadastro">Cadastro</a>
-            </li>
-
-            <div *ngIf='auth.btnSair()'>
-              <li class="nav-item">
-                <a class="nav-link texto text-monospace text-uppercase font-weight-bold p-3" (click)='sair()'>Sair</a>
-              </li>
-            </div>
-
-          </ul>
-          
-        </div>
-    </nav>
-
+      </ul>
+    </div>
+  </nav>
 </div>
