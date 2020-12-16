@@ -8,17 +8,17 @@
         
         <!--Titulo-->
         <div class="col-md-8">
-            <h4 class="text-center mb-4 text-monospace">Diário de um(a) Preto(a)...</h4>
+            <h4 class="text-center mb-4 text">Diário de um(a) Preto(a)...</h4>
         <!--/Titulo-->    
         
         <!--Formulário-->    
             <div class="form-group">
-                <label class="text-monospace" for="titulo">Título:</label>
+                <label class="text" for="titulo">Título:</label>
                 <input type="text" class="form-control" id="título" placeholder="Digite aqui o seu título" [(ngModel)] = 'postagem.titulo'>
             </div>
 
             <div class="form-group">
-                <label class="text-monospace" for="texto">Texto:</label>
+                <label class="text" for="texto">Texto:</label>
                 <textarea class="form-control" id="texto" rows="3" placeholder="Digite aqui o seu texto" [(ngModel)] = 'postagem.texto'></textarea>
             </div>
 
@@ -26,8 +26,8 @@
                 <div class="col-md-6">
                     
                     <div class="form-group m-0">
-                        <label class="text-monospace" for="tema">
-                            Escolha um tema ou <a class = "text-dark bg-light "routerLink="/cadastro-tema">Cadastre um novo.</a>
+                        <label class="text" for="tema">
+                            Escolha um tema ou <a class = "text-dark bg-light "routerLink="/cadastro-tema">Cadastrar/Editar</a>
                         </label>
 
                         <select name="tema" id='tema' class="form-control" [(ngModel)]='idTema' (change)='findByIdTemas()'>                            
@@ -46,10 +46,10 @@
         <!--Navegador-->       
             <nav class="d-flex justify-content-center">
                 <div class="nav nav-tabs" id="nav-tab" role="tablist">
-                    <a class="nav-item nav-link active text-secondary text-monospace font-weight-bold" id="nav-home-tab"
+                    <a class="nav-item nav-link active text-secondary text font-weight-bold" id="nav-home-tab"
                         data-toggle="tab" href="#minhas-postagens" role="tab" aria-controls="nav-home"
                         aria-selected="true">Minhas Postagens</a>
-                    <a class="nav-item text-monospace nav-link text-secondary font-weight-bold" id="nav-profile-tab"
+                    <a class="nav-item text nav-link text-secondary font-weight-bold" id="nav-profile-tab"
                         data-toggle="tab" href="#postagens-temas" role="tab" aria-controls="nav-profile"
                         aria-selected="false">Postagens por tema</a>
                 </div>
